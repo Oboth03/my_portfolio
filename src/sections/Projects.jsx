@@ -41,7 +41,7 @@ function Projects() {
     ]
 
     return (
-        <section id="projects" className=" min-h-screen text-white pt-20 flex items-center">
+        <section id="projects" className="p-10 min-h-screen text-white pt-20 flex items-center">
             <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">My Projects</h2>
                 <div className="grid md:grid-cols-3 gap-8">
