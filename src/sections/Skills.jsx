@@ -10,7 +10,7 @@ function Skills() {
     ]
 
     return (
-        <section id="skills" className="min-h-screen text-white pt-20 flex items-center">
+        <section id="skills" className="py-5 text-white pt-20 flex items-center">
             <div className="max-w-5xl mx-auto px-6 w-full">
                 <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">My Skills</h2>
             

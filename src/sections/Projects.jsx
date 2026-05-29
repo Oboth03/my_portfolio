@@ -41,15 +41,15 @@ function Projects() {
     ]
 
     return (
-        <section id="projects" className="p-10 min-h-screen text-white pt-20 flex items-center">
+        <section id="projects" className="py-5 p-10 text-white pt-20 flex items-center">
             <div>
                 <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center">My Projects</h2>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 md:grid-cols-4 gap-8">
                     {projects.map((project, index) => (
                         <div key={index} className=" bg-gray-800 rounded-xl overflow-hidden hover:scale-105 transition">
                             {/*Image placeholder*/}
                             <div className="h-40 bg-gray-700"></div>
-                            <div className="p-5">
+                            <div className="p-2">
                                 <h3 className="text-xl font-semibold mb-2">
                                     {project.title}</h3>
                                 <p className="text-gray-400 mb-4">{project.description}</p>
