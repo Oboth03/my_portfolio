@@ -1,7 +1,7 @@
 function Contacts() {
     return (
-        <section id="contact" className="py-5 flex items-center  text-white pt-20">
-            <div className="max-w-3xl mx-auto px-6 w-full">
+        <section id="contact" className="py-5 flex items-center px-6 text-white pt-20">
+            <div className="max-w-5xl mx-auto px-6 w-full">
                 <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">Contact Me</h2>
                 
                 <form className="space-y-6">
@@ -30,7 +30,7 @@ function Contacts() {
                         </div>
                         <button
                             type="submit"
-                            className="w-full bg-blue-500 py-3 rounded-lg font-semibold hover:bg-blue-600 transition">Send Message
+                            className="w-full bg-blue-500 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">Send Message
                         </button>
 
                 </form>
