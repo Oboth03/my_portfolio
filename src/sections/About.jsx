@@ -14,7 +14,13 @@ function About() {
                 <p className="text-gray-400 mb-6 leading-relaxed">
                    I enjoy creating responsive user-friendly designs and continuously improving my skills through real world projects
                 </p>
-                <button className="bg-blue-500 px-6 font-semibold py-3 rounded-lg hover:text-black hover:bg-blue-600 hover:scale-105 duration-300 transition">Download CV</button>
+                <a
+                    href={`${import.meta.env.BASE_URL}FRONTEND%20DEVELOPER%20RESUME.docx`}
+                    download
+                    className="bg-blue-500 px-6 font-semibold py-3 rounded-lg hover:text-black hover:bg-blue-600 hover:scale-105 duration-300 transition"
+                >
+                    Download CV
+                </a>
                 </div>
                 <div className="flex justify-center">
                     <img
