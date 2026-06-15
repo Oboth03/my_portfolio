@@ -8,6 +8,10 @@ function Contacts() {
         message: ""
     })
 
+    const [loading, setLoading] = useState(false)
+    const [success, setSuccess] = useState("")
+    const [error, setError] = useState("")
+
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -18,6 +22,10 @@ function Contacts() {
     const handleSubmit = (e) => {
         e.preventDefault()
 
+        setLoading(true)
+        setSuccess("")
+        setError("")
+
         emailjs.send(
             "service_ofh5gab",
         "template_ee9vkhv",
@@ -25,40 +33,25 @@ function Contacts() {
         "EDCnsjvxJetEqrg5v"
         )
             .then(() => {
-                setSuccess(true)
-                
+                setSuccess("Message sent successfully")
+                setLoading(false)
+
+                // e.target.reset();
+
             setFormData({
                  name: "",
                  email: "",
                  message: ""
             })
                 
-                setTime(() => {
-                    setSuccess(false)
+                setTimeout(() => {
+                    setSuccess("")
                 }, 3000)
             }) .catch ((error) => {
-            console.log(error)
+                setLoading(false)
+                setError("Something went wrong! Please try again.")
         })
-       
-
-        console.log(formData)
-
-        setSuccess(true)
-        setTimeout(() => {
-            setSuccess(false)
-        }, 3000);
-        // setSubmitted(true)
-
-        setFormData({
-        name: "",
-        email: "",
-        message: ""
-        })
-    }
-      
-        const [success, setSuccess] = useState(false)
-
-     const [submitted, setSubmitted] = useState(false)
+     }
 
         return (
             <section id="contact" className="py-5 flex items-center px-6 text-white pt-20">
@@ -105,9 +98,9 @@ function Contacts() {
                         )}
                         <button
                             type="submit"
-                            disabled={submitted}
+                            disabled={loading}
                             className="w-full bg-blue-500 py-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
-                            {submitted ? "Message Sent" : "Send Message"}
+                            {loading ? "Sending..." : "Send Message"}
                         </button>
 
                     </form>

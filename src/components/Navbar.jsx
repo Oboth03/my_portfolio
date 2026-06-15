@@ -1,13 +1,85 @@
-function Navbar({name}) {
+import { useState, useEffect  } from "react"
+
+
+function Navbar({ name }) {
+    const [active, setActive] = useState("home")
+  const [menuOpen, setMenuOpen] = useState("false")
+
+    const links = [
+        "home",
+        "about",
+         "skills",
+        "projects",
+        "contact"
+        
+    ]
+
+    useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActive(entry.target.id);
+                }
+            });
+        },
+        {
+            threshold: 0.5,
+        }
+    );
+
+    sections.forEach((section) => {
+        observer.observe(section);
+    });
+
+    return () => {
+        sections.forEach((section) => {
+            observer.unobserve(section);
+        });
+    };
+
+}, []);
     return (
         <nav className="fixed px-6 pt-15 w-full top-0 z-50 bg-black/60 border-b border-gray-800 backdrop-blur-xl text-white p-4 flex justify-between items-center">
             <h1 className="text-lg font-bold">{name}</h1>
 
-            <div className="flex gap-6">
-                <a href="#home" className="hover:text-blue-400">Home</a>
-                <a href="#about" className="hover:text-blue-400">About</a>
-                <a href="#projects" className="hover:text-blue-400">Projects</a>
-                <a href="#contact" className="hover:text-blue-400">Contact</a>
+            <button  onClick={() => setMenuOpen(!menuOpen)}  className="md:hidden text-2x1">
+                {menuOpen ? "x": "≡"}
+            </button>
+
+            <div 
+className={`
+${menuOpen ? "flex" : "hidden"}
+md:flex
+flex-col
+md:flex-row
+gap-6
+absolute
+md:static
+top-16
+left-0
+w-full
+md:w-auto
+bg-black
+md:bg-transparent
+p-6
+md:p-0
+`}
+>
+              {links.map((link) => (
+    <a
+      key={link}
+                      href={`#${link}`}
+ onClick={() => setMenuOpen(false)}
+      className={`capitalize ${
+        active === link ? "text-blue-400" : ""
+      }`}
+    >
+      {link}
+    </a>
+))}
             </div>
         </nav>
     )

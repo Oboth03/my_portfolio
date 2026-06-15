@@ -1,7 +1,13 @@
+import { motion } from "framer-motion"
+
 function About() {
     return (
         <section id="about" className="py-5 px-6 flex items-center justify-center text-white pt-24">
-            <div className="max-w-5xl mx-auto  grid md:grid-cols-2 gap-10 items-center px-4">
+            <motion.div initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="max-w-5xl mx-auto  grid md:grid-cols-2 gap-10 items-center px-4">
                 <div>
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
              About Me
@@ -22,14 +28,18 @@ function About() {
                     Download CV
                 </a>
                 </div>
-                <div className="flex justify-center">
+                <motion.div initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                    className="flex justify-center">
                     <img
                         src="/hero.png"
                     alt="job"
                     className="w-64 h-64 md:w-72 md:h-72 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full shadow-2xl shadow-blue-500/20"/>
                   
-        </div>
-        </div>
+        </motion.div>
+        </motion.div>
         </section>
     )
 }
