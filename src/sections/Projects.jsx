@@ -5,11 +5,6 @@ function Projects() {
         {
             "title": "Nile Safaris",
             "description": "A website for showing travel destinations and booking safaris",
-            "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
             "image": "/nile.png",
             "live": "",
             "code": ""
@@ -17,11 +12,6 @@ function Projects() {
         {
             "title": "To do list app",
             "description": "system to manage data and tasks",
-             "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
             "image": "",
              "live": "https://oboth02job.github.io/MyTodoApp/",
             "code": "https://github.com/oboth02Job/MyTodoApp"
@@ -30,11 +20,6 @@ function Projects() {
         {
             "title": "Chamber of commerce",
             "description": "Market place",
-             "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
             "image": "",
             "live": "",
             "code": ""
@@ -42,11 +27,6 @@ function Projects() {
          {
             "title": "Tents E-commerce",
              "description": "Market place",
-              "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
              "image": "",
             "live": "https://oboth02job.github.io/wdd330-sleepoutside/",
             "code": "https://github.com/oboth02Job/wdd330-sleepoutside"
@@ -54,11 +34,6 @@ function Projects() {
           {
             "title": "Fitness App",
               "description": "Market place",
-               "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
               "image": "",
             "live": "",
             "code": ""
@@ -66,14 +41,9 @@ function Projects() {
            {
             "title": "Smart English Language Hub",
                "description": "Market place",
-                "technologies": [
-                "HTML",
-                "CSS",
-                "JavaScript"
-            ],
                "image": "",
-            "live": "",
-            "code": ""
+            "live": "https://oboth03.github.io/hubWebsite/",
+            "code": "https://github.com/Oboth03/hubWebsite"
          },
         
     ]
