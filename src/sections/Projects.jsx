@@ -36,7 +36,7 @@ function Projects() {
               "description": "Market place",
               "image": "",
             "live": "",
-            "code": ""
+            "code": "",
         },
            {
             "title": "Smart English Language Hub",
