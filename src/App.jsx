@@ -5,6 +5,7 @@ import Projects from "./sections/Projects"
 import Contacts from "./sections/Contacts"
 import Footer from "./components/Footer"
 import Skills from "./sections/Skills"
+import BackToTop from "./components/BackToTop"
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       <Skills />
       <Projects />
       <Contacts />
-      <Footer year="2026"/>
+      <Footer year="2026" />
+      <BackToTop />
     </div>
   )
 }

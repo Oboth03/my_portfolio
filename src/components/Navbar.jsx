@@ -40,12 +40,27 @@ function Navbar({ name }) {
         });
     };
 
-}, []);
+    }, []);
+    
+    useEffect(() => {
+const handleResize = () => {
+if (window.innerWidth >= 768) {
+setMenuOpen(false);
+}
+};
+
+window.addEventListener("resize", handleResize);
+
+return () => {
+window.removeEventListener("resize", handleResize);
+};
+    }, []);
+    
     return (
-        <nav className="fixed px-6 pt-15 w-full top-0 z-50 bg-black/60 border-b border-gray-800 backdrop-blur-xl text-white p-4 flex justify-between items-center">
+        <nav className="fixed px-4 sm:px-6 py-4 w-full top-0 z-50 bg-black/60 border-b border-gray-800 backdrop-blur-xl text-white p-4 flex justify-between items-center">
             <h1 className="text-lg font-bold">{name}</h1>
 
-            <button  onClick={() => setMenuOpen(!menuOpen)}  className="md:hidden text-2x1">
+            <button  onClick={() => setMenuOpen(!menuOpen)}  className="md:hidden gap-8 text-2xl">
                 {menuOpen ? "x": "≡"}
             </button>
 
@@ -55,10 +70,11 @@ ${menuOpen ? "flex" : "hidden"}
 md:flex
 flex-col
 md:flex-row
-gap-6
+items-center
+gap-4
 absolute
 md:static
-top-16
+top-full
 left-0
 w-full
 md:w-auto
