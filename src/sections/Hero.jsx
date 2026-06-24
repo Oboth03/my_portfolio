@@ -2,7 +2,7 @@ import { motion } from "framer-motion"
 
 
 
-function Hero({ title, subtitle }) {
+function Hero({ title, subtitle, subtitle2 }) {
   return (
     
     <section id="home" className="py-5 px-6 flex flex-col items-center justify-center text-white bg-gradient-to-b from-gray-900 to-black px-6 pt-24">
@@ -15,7 +15,12 @@ function Hero({ title, subtitle }) {
         <motion.p initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-2xl leading-relaxed text-gray-300 mb-5">{subtitle}</motion.p>
+          className="text-lg md:text-2xl leading-relaxed text-gray-300 font-semibold mb-5">{subtitle}</motion.p>
+        
+        <motion.p initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-lg md:text-2xl leading-relaxed text-gray-300 mb-5">{subtitle2}</motion.p>
         
         <motion.div initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

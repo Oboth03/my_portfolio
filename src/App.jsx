@@ -13,7 +13,9 @@ function App() {
       <Navbar name="Job Oboth"/>
       <Hero 
       title="Hi, I'm Job👋"
-      subtitle="Frontend Developer passionate about building modern web applications" />
+        subtitle="Full-Stack Developer (Backend-Focused)"
+       subtitle2="I build modern web applications, REST APIs, and database-driven systems with a focus on reliable backend solutions." />
+
       <About />
       <Skills />
       <Projects />

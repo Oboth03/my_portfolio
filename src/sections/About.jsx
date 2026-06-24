@@ -14,7 +14,7 @@ function About() {
             </h2>
 
                 <p className="text-lg md:text-xl text-gray-300 mb-4 leading-relaxed">
-                    Hi, I’m Job — a software development student passionate about building modern web applications.
+                    Hi, I’m Job — I am a software development student with a passion for backend engineering. I enjoy designing APIs, working with databases, and creating full-stack applications that solve real problems.
                 </p>
 
                 <p className="text-gray-400 mb-6 leading-relaxed">
