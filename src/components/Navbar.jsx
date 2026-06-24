@@ -3,7 +3,7 @@ import { useState, useEffect  } from "react"
 
 function Navbar({ name }) {
     const [active, setActive] = useState("home")
-  const [menuOpen, setMenuOpen] = useState("false")
+  const [menuOpen, setMenuOpen] = useState(false)
 
     const links = [
         "home",
