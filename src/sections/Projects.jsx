@@ -1,6 +1,13 @@
 import { motion } from "framer-motion"
 
 function Projects() {
+    const getAssetUrl = (path) => {
+        const base = import.meta.env.BASE_URL.endsWith("/")
+            ? import.meta.env.BASE_URL
+            : `${import.meta.env.BASE_URL}/`;
+        return `${base}${path.replace(/^\/+/, "")}`;
+    };
+
     const projects = [
         {
             "title": "Nile Safaris",
@@ -12,7 +19,7 @@ function Projects() {
         {
             "title": "To do list app",
             "description": "system to manage data and tasks",
-            "image": "",
+            "image": "/taskapp.png",
              "live": "https://oboth02job.github.io/MyTodoApp/",
             "code": "https://github.com/oboth02Job/MyTodoApp"
          },
@@ -41,7 +48,7 @@ function Projects() {
            {
             "title": "Smart English Language Hub",
                "description": "Market place",
-               "image": "",
+               "image": "/smarthub.png",
             "live": "https://oboth03.github.io/hubWebsite/",
             "code": "https://github.com/Oboth03/hubWebsite"
          },
@@ -95,15 +102,18 @@ const cardVariants = {
                             }}
                             
                             className=" bg-gray-800 rounded-xl overflow-hidden transition flex flex-col">
-                            <div className="h-40 border border-gray-800 rounded-xl  overflow-hidden hover:-translate-y-2 transition  duration-300"></div>
-                            <p>{project.image}</p>
-                            <motion.img 
-                                 src={project.image}
-                                alt={project.title}
-                                className="w-full object-cover"
-                                whileHover={{ scale: 1.1 }}
-                                transition={{ duration: 0.3 }}
-                            />
+                            {project.image ? (
+                                <img
+                                    src={getAssetUrl(project.image)}
+                                    alt={project.title}
+                                    className='w-full h-40 object-cover rounded-xl'
+                                />
+                            ) : (
+                                <div className='w-full h-40 flex items-center justify-center bg-gray-700 text-gray-400 rounded-xl'>
+                                    No image available
+                                </div>
+                            )}
+                            
                             <div className="p-3">
                                 <h3 className="text-xl font-semibold mb-2">
                                     {project.title}</h3>

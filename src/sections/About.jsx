@@ -1,6 +1,13 @@
 import { motion } from "framer-motion"
 
 function About() {
+    const getAssetUrl = (path) => {
+        const base = import.meta.env.BASE_URL.endsWith("/")
+            ? import.meta.env.BASE_URL
+            : `${import.meta.env.BASE_URL}/`;
+        return `${base}${path.replace(/^\/+/, "")}`;
+    };
+
     return (
         <section id="about" className="py-5 px-6 flex items-center justify-center text-white pt-24">
             <motion.div initial={{ opacity: 0, y: 50 }}
@@ -34,9 +41,10 @@ function About() {
                 viewport={{ once: true }}
                     className="flex justify-center">
                     <img
-                        src="/hero.png"
-                    alt="job"
-                    className="w-64 h-64 md:w-72 md:h-72 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full shadow-2xl shadow-blue-500/20"/>
+                        src={getAssetUrl("profile.png")}
+                        alt="job"
+                        className="w-64 h-64 md:w-72 md:h-72 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full shadow-2xl shadow-blue-500/20"
+                    />
                   
         </motion.div>
         </motion.div>
