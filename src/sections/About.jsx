@@ -28,7 +28,7 @@ function About() {
                    I enjoy creating responsive user-friendly designs and continuously improving my skills through real world projects
                 </p>
                 <a
-                    href={`${import.meta.env.BASE_URL}FRONTEND%20DEVELOPER%20RESUME.docx`}
+                    href={`${import.meta.env.BASE_URL}Full-stack-dev_resume.docx.docx`}
                     download
                     className="bg-blue-500 px-6 font-semibold py-3 rounded-lg hover:text-black hover:bg-blue-600 hover:scale-105 duration-300 transition"
                 >
